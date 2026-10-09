@@ -1,6 +1,6 @@
 # Luke Studio
 
-The source code for the Luke Studio website, showcasing web design and development services for small businesses. The site includes a product catalogue, basket, and embedded Stripe Checkout, with server-side checkout and webhook handling in Netlify Functions.
+The source code for my website, showcasing web design and development services for small businesses. The site includes a product catalogue, basket, and embedded Stripe Checkout, with server-side checkout and webhook handling in Netlify Functions.
 
 ## Tech stack
 
