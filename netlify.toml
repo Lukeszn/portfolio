@@ -1,0 +1,57 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["products.json"]
+
+# Keep server-side and tooling files from being served as static pages
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/node_modules/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/STRIPE_INTEGRATION_TODO.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.vscode/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Scripts only from this site and Stripe; card details are entered in Stripe's own iframe.
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://*.stripe.com; frame-src https://*.stripe.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.wp.com https://*.stripe.com; connect-src 'self' https://*.stripe.com; form-action 'self' https://*.stripe.com; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = 'camera=(), microphone=(), geolocation=(), usb=(), payment=(self "https://js.stripe.com"), interest-cohort=()'
+    Cross-Origin-Opener-Policy = "same-origin-allow-popups"
+    Cross-Origin-Resource-Policy = "same-origin"
+
+[[headers]]
+  for = "/success.html"
+  [headers.values]
+    Cache-Control = "no-store"
+    Referrer-Policy = "no-referrer"

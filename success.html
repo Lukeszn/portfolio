@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Payment Received | Luke Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/page.css" />
+</head>
+<body>
+  <nav class="page-nav"><a href="/" class="logo">Luke Studio</a></nav>
+  <main class="center">
+    <h1>Payment received, thank you</h1>
+    <p>Stripe will email your receipt shortly. I'll be in touch within 24 hours to book your discovery call.</p>
+    <p>Your project details have been saved with your order and sent to me.</p>
+    <p>Questions in the meantime? Email <a href="mailto:lukeszns@gmail.com">lukeszns@gmail.com</a>.</p>
+    <a href="/" class="btn">Back to the website</a>
+  </main>
+
+  <!-- Netlify detects this form at deploy time; the Stripe webhook submits paid project details to it -->
+  <form name="order-details" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="order-details" />
+    <input type="hidden" name="subject" />
+    <input name="first_name" />
+    <input name="last_name" />
+    <input name="email" />
+    <input name="product" />
+    <input name="session_id" />
+    <textarea name="message"></textarea>
+    <input name="bot-field" />
+  </form>
+
+  <script src="js/success.js" defer></script>
+</body>
+</html>

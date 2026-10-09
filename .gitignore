@@ -1,0 +1,8 @@
+node_modules/
+.env
+.env.*
+.netlify/
+
+# Local notes and editor config
+STRIPE_INTEGRATION_TODO.md
+.vscode/

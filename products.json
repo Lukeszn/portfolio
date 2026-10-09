@@ -1,0 +1,50 @@
+{
+  "currency": "gbp",
+  "products": [
+    {
+      "id": "website-simple",
+      "name": "Simple Website",
+      "category": "Websites",
+      "description": "A fast, mobile-first brochure site for your business.",
+      "features": ["Homepage, About, Services & Contact pages", "Mobile optimised & SEO setup", "Hosting, maintenance & domain management"],
+      "amount": 20000,
+      "interval": null
+    },
+    {
+      "id": "website-complex",
+      "name": "Complex Website",
+      "category": "Websites",
+      "description": "Everything in Simple, plus payments, accounts and bookings.",
+      "features": ["Payment processing & booking system", "Accounts, database & admin views", "Ongoing support & AI features"],
+      "amount": 50000,
+      "interval": null
+    },
+    {
+      "id": "ai-starter",
+      "name": "AI Receptionist: Starter",
+      "category": "AI Receptionist",
+      "description": "Website chat plus basic call handling.",
+      "features": ["24/7 website chat assistant", "Basic call handling", "Cancel any time"],
+      "amount": 4000,
+      "interval": "month"
+    },
+    {
+      "id": "ai-growth",
+      "name": "AI Receptionist: Growth",
+      "category": "AI Receptionist",
+      "description": "Calls and chat with unlimited interactions.",
+      "features": ["Calls + website chat", "Unlimited interactions", "Cancel any time"],
+      "amount": 9700,
+      "interval": "month"
+    },
+    {
+      "id": "ai-pro",
+      "name": "AI Receptionist: Professional",
+      "category": "AI Receptionist",
+      "description": "Calls, chat and bookings with an AI dashboard.",
+      "features": ["Calls, chat & bookings", "AI performance dashboard", "Cancel any time"],
+      "amount": 19700,
+      "interval": "month"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "luke-studio",
+  "private": true,
+  "description": "Luke Studio website with Stripe checkout via Netlify Functions",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "stripe": "^23.0.0"
+  }
+}

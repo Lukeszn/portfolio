@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luke Studio | Web Design & Development</title>
+  <meta name="description" content="Websites, apps, AI receptionists and data automation for small businesses. Fixed-price packages you can buy online, or a custom quote." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Stripe.js must load from Stripe directly (PCI requirement); the dahlia build provides the checkout form -->
+  <script src="https://js.stripe.com/dahlia/stripe.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141619'/%3E%3Cpath d='M11 8v16h10' stroke='%23f7f8f9' stroke-width='3.5' fill='none'/%3E%3C/svg%3E" />
+  <meta property="og:title" content="Luke Studio | Web Design & Development" />
+  <meta property="og:description" content="Websites, apps, AI receptionists and data automation for small businesses. Buy a package online or request a quote." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" type="button" aria-label="Close menu">
+      <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+    </button>
+    <a href="#services">Services</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#about">About</a>
+    <a href="#contact">Start a project</a>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#" class="logo">Luke Studio</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Start a project</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="basket-btn" id="basketBtn" type="button" aria-label="Open basket (0 items)" aria-controls="basketDrawer" aria-expanded="false">
+        <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.610-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z"/></svg>
+        <span class="basket-count" id="basketCount" hidden>0</span>
+      </button>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-copy">
+      <h1 class="hero-title">Websites that actually convert.</h1>
+      <p class="hero-sub">
+        Fast, well-made websites, apps and AI tools for businesses that want more enquiries from their website.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start a project</a>
+        <a href="#work" class="btn-outline">See my work</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <figure class="hero-browser">
+        <div class="hero-browser-bar"><span></span><span></span><span></span><em>lukeszn.github.io/New-Era-App</em></div>
+        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=1200&h=760" alt="" width="1200" height="760" />
+      </figure>
+      <figure class="hero-phone">
+        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNaomi-app%2F?w=420&h=860" alt="" width="420" height="860" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats" aria-label="At a glance">
+    <dl class="hero-stats">
+      <div><dt>Projects delivered</dt><dd>15+</dd></div>
+      <div><dt>Client satisfaction</dt><dd>100%</dd></div>
+      <div><dt>Typical reply</dt><dd>Under 24 hrs</dd></div>
+      <div><dt>Support after launch</dt><dd>30 days</dd></div>
+    </dl>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">What I build</h2>
+      </div>
+      <p class="section-desc">
+        Websites and AI receptionist plans have fixed prices you can pay for online. Apps and automation are scoped per project, so those start with a quote.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card service-buy">
+        <div class="svc-top"><h3 class="service-title">Websites</h3><span class="svc-badge">Buy online</span></div>
+        <p class="service-desc">Fast, mobile-first websites built to turn visitors into customers, from a simple brochure site to bookings and payments.</p>
+        <ul class="svc-features">
+          <li>Custom design, mobile-first and SEO ready</li>
+          <li>Domain, hosting and maintenance included</li>
+          <li>Payment processing and booking systems</li>
+        </ul>
+        <div class="svc-footer">
+          <div class="svc-from">From <strong>£200</strong> one-off</div>
+          <button class="svc-cta-link" type="button" data-quote-service="websites">Choose a package</button>
+        </div>
+      </article>
+
+      <article class="service-card service-buy">
+        <div class="svc-top"><h3 class="service-title">AI Receptionist</h3><span class="svc-badge">Buy online</span></div>
+        <p class="service-desc">An AI receptionist that answers your phone and website chat 24/7, qualifies leads and takes bookings while you work.</p>
+        <ul class="svc-features">
+          <li>Answers calls 24/7, so no missed leads</li>
+          <li>Website chat and lead qualification</li>
+          <li>Automated bookings with a dashboard of every interaction</li>
+        </ul>
+        <div class="svc-footer">
+          <div class="svc-from">From <strong>£40</strong> per month</div>
+          <button class="svc-cta-link" type="button" data-quote-service="ai">Choose a plan</button>
+        </div>
+      </article>
+
+      <article class="service-card service-quote">
+        <div class="svc-top"><h3 class="service-title">App Development</h3><span class="svc-badge">Quote</span></div>
+        <p class="service-desc">Web and mobile apps built for scale, from an MVP to a full platform, with clean code that grows with your business.</p>
+        <ul class="svc-features">
+          <li>Web apps, mobile apps and dashboards</li>
+          <li>React, Next.js, Firebase and modern stacks</li>
+          <li>User accounts, payments and admin panels</li>
+        </ul>
+        <div class="svc-footer">
+          <div class="svc-from">Typically <strong>£200 to £5,000</strong></div>
+          <button class="svc-cta-link" type="button" data-quote-service="app">Request a quote</button>
+        </div>
+      </article>
+
+      <article class="service-card service-quote">
+        <div class="svc-top"><h3 class="service-title">Data Automation</h3><span class="svc-badge">Quote</span></div>
+        <p class="service-desc">Automate repetitive work, connect your tools and turn raw data into reports with custom pipelines and integrations.</p>
+        <ul class="svc-features">
+          <li>Connect your CRM, Sheets, Slack and other tools</li>
+          <li>Custom scrapers, pipelines and integrations</li>
+          <li>Real-time dashboards and reporting</li>
+        </ul>
+        <div class="svc-footer">
+          <div class="svc-from">Typically <strong>£200 to £2,000</strong></div>
+          <button class="svc-cta-link" type="button" data-quote-service="automation">Request a quote</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Selected work</h2>
+      </div>
+      <p class="section-desc">Live projects you can open and use. Screenshots are taken from the deployed sites.</p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="preview-bar"><span class="preview-url">lukeszn.github.io/New-Era-App</span></div>
+          <div class="preview-viewport">
+            <img class="preview-screenshot" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=1200&h=675" alt="New Era App home screen" loading="lazy" />
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag">Web app</span><span class="tag">Dashboard</span></div>
+          <h3 class="project-name">New Era web app</h3>
+          <p class="project-desc">A feature-rich web application for the New Era brand, with live data and a responsive layout that works on every device.</p>
+          <a href="https://lukeszn.github.io/New-Era-App/" target="_blank" rel="noopener noreferrer" class="project-link">View live site</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <div class="preview-bar"><span class="preview-url">lukeszn.github.io/Naomi-app</span></div>
+          <div class="preview-viewport">
+            <img class="preview-screenshot" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNaomi-app%2F?w=1200&h=675" alt="Naomi App home screen" loading="lazy" />
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-tags"><span class="tag">Web app</span><span class="tag">Custom UX</span></div>
+          <h3 class="project-name">Naomi web app</h3>
+          <p class="project-desc">A clean, purpose-built web application for Naomi, designed around simple navigation and practical everyday tasks.</p>
+          <a href="https://lukeszn.github.io/Naomi-app/" target="_blank" rel="noopener noreferrer" class="project-link">View live site</a>
+        </div>
+      </article>
+      <div class="systems-panel phone-showcase project-phone">
+        <div class="systems-panel-title">Mobile previews</div>
+        <div class="phone-stage" aria-label="Mobile app preview carousel">
+          <div class="mobile-phone">
+            <div class="phone-screen">
+              <img class="phone-screenshot" id="phoneScreenshot" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=420&h=860" alt="New Era App main page preview" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <div class="phone-meta">
+          <div class="phone-controls">
+            <button class="phone-arrow prev" id="phonePrev" type="button" aria-label="Previous app">
+              <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg>
+            </button>
+            <div class="phone-dots" id="phoneDots" aria-label="Choose app preview"></div>
+            <button class="phone-arrow next" id="phoneNext" type="button" aria-label="Next app">
+              <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg>
+            </button>
+          </div>
+          <div class="phone-meta-title" id="phoneMetaTitle">New Era Web App</div>
+          <p class="phone-meta-copy" id="phoneMetaCopy">Dashboard-style app experience with live data, responsive screens, and a polished mobile view.</p>
+          <a class="phone-live-link" id="phoneLiveLink" href="https://lukeszn.github.io/New-Era-App/" target="_blank" rel="noopener noreferrer">Open live project</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="systems-grid">
+      <div class="systems-panel flow-panel">
+        <div class="systems-panel-title">How the AI receptionist handles a lead</div>
+        <div class="ai-lead-flow" aria-label="Lead captured by AI receptionist workflow">
+          <div class="lead-source">
+            <div class="lead-chip">Missed call</div>
+            <div class="lead-chip">Website chat</div>
+            <div class="lead-chip">Form enquiry</div>
+          </div>
+          <div class="lead-ai">
+            <div class="ai-badge">AI receptionist</div>
+            <p>Answers within seconds, any time of day. It asks what the customer needs, checks your availability and offers a slot.</p>
+          </div>
+          <dl class="lead-output">
+            <div class="output-row"><dt>Lead</dt><dd class="hot">Qualified</dd></div>
+            <div class="output-row"><dt>Action</dt><dd>Booking created</dd></div>
+            <div class="output-row"><dt>CRM</dt><dd>Contact logged</dd></div>
+            <div class="output-row"><dt>Alert</dt><dd>Owner notified</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">How a project runs</h2>
+      </div>
+      <p class="section-desc">The same four steps whether you buy a package online or start with a quote.</p>
+    </div>
+    <ol class="process-grid">
+      <li class="process-step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <h3 class="step-title">Discovery call</h3>
+        <p class="step-desc">We talk about your goals, your audience, your competitors, and what success looks like for you.</p>
+      </li>
+      <li class="process-step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <h3 class="step-title">Strategy and design</h3>
+        <p class="step-desc">I map out the structure and wireframes, then design the pages for you to review before anything is built.</p>
+      </li>
+      <li class="process-step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <h3 class="step-title">Build and optimise</h3>
+        <p class="step-desc">Clean code, fast load times, SEO foundations, and a layout that works properly on phones.</p>
+      </li>
+      <li class="process-step">
+        <span class="step-num" aria-hidden="true">4</span>
+        <h3 class="step-title">Launch and support</h3>
+        <p class="step-desc">We go live together, then I stay on for 30 days to make sure everything performs as planned.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-text">
+      <h2 class="section-title">The person behind the work</h2>
+      <p class="about-body">
+        I'm Luke, a web designer and developer who cares about websites that perform, not just ones that look good. I've helped startups, local businesses and growing brands build their online presence from scratch.
+      </p>
+      <p class="about-body">
+        A website is your hardest-working salesperson, so every project I take on is built around strategy, speed and conversion.
+      </p>
+    </div>
+    <div class="about-side">
+      <h3 class="about-side-title">Skills and tools</h3>
+      <ul class="skills-grid">
+        <li>React and Next.js</li>
+        <li>Webflow and Framer</li>
+        <li>Shopify development</li>
+        <li>UI/UX and Figma</li>
+        <li>Technical SEO</li>
+        <li>WordPress</li>
+        <li>Performance tuning</li>
+        <li>Copywriting</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">What clients say</h2>
+      </div>
+    </div>
+    <div class="testimonials-grid">
+      <figure class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">“Luke built us something we're genuinely proud to show clients. The site looks incredible, loads fast, and has already brought in new enquiries we wouldn't have had before. Couldn't recommend him enough.”</blockquote>
+        <figcaption class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">DT</div>
+          <div><div class="author-name">D.T.</div><div class="author-role">Business owner</div></div>
+        </figcaption>
+      </figure>
+      <figure class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote class="testimonial-text">“From start to finish Luke was professional, responsive and delivered exactly what I asked for, and more. The app works perfectly and my customers love it. An absolute pleasure to work with.”</blockquote>
+        <figcaption class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">NS</div>
+          <div><div class="author-name">N.S.</div><div class="author-role">Founder</div></div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- CONTACT / ORDER -->
+  <section id="contact">
+    <div class="contact-info">
+      <h2 class="section-title">Tell me what you need</h2>
+      <p class="contact-intro">
+        Choose a service and fill in the details. Website packages and AI receptionist plans go straight into your basket, and your project details are sent to me as soon as payment goes through. Everything else comes to me as a quote request.
+      </p>
+
+      <div class="pay-box">
+        <h3>Paying online</h3>
+        <ul>
+          <li>Pay by card, Apple Pay, Google Pay or bank transfer through Stripe.</li>
+          <li>Website packages are a one-off payment. AI receptionist plans are billed monthly and you can cancel any time.</li>
+          <li>Your card details go straight to Stripe and never touch this website.</li>
+          <li>I'll be in touch within 24 hours of payment to book your discovery call.</li>
+        </ul>
+      </div>
+
+      <ul class="contact-list">
+        <li>
+          <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.710a8,8,0,0,0,10.82,0L216,74.19V192Z"/></svg>
+          <div><div class="contact-label">Email</div><a href="mailto:lukeszns@gmail.com" class="contact-value">lukeszns@gmail.com</a></div>
+        </li>
+        <li>
+          <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.060,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></svg>
+          <div><div class="contact-label">Phone or WhatsApp</div><a href="tel:07851950009" class="contact-value">07851 950009</a></div>
+        </li>
+        <li>
+          <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></svg>
+          <div><div class="contact-label">Response time</div><div class="contact-value">Within 24 hours, working remotely worldwide</div></div>
+        </li>
+      </ul>
+    </div>
+
+    <form class="contact-form" name="quote-request" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="quote-request" />
+      <input type="hidden" name="subject" value="New quote request from Luke Studio website" />
+      <textarea maxlength="5000" name="message" id="quoteMessage" hidden></textarea>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="f-first">First name</label>
+          <input id="f-first" maxlength="120" type="text" name="first_name" autocomplete="given-name" required />
+        </div>
+        <div class="form-group">
+          <label for="f-last">Last name</label>
+          <input id="f-last" maxlength="120" type="text" name="last_name" autocomplete="family-name" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="f-email">Email</label>
+        <input id="f-email" maxlength="254" type="email" name="email" autocomplete="email" placeholder="you@company.com" required />
+      </div>
+
+      <fieldset class="form-group">
+        <legend>Service</legend>
+        <div class="service-picker" id="servicePicker">
+          <label class="sp-opt">
+            <input type="radio" name="service" value="websites" required />
+            <span class="sp-name">Website</span>
+            <span class="sp-hint">Packages from £200, buy online</span>
+          </label>
+          <label class="sp-opt">
+            <input type="radio" name="service" value="ai" />
+            <span class="sp-name">AI Receptionist</span>
+            <span class="sp-hint">Plans from £40/month, buy online</span>
+          </label>
+          <label class="sp-opt">
+            <input type="radio" name="service" value="app" />
+            <span class="sp-name">App Development</span>
+            <span class="sp-hint">Custom quote</span>
+          </label>
+          <label class="sp-opt">
+            <input type="radio" name="service" value="automation" />
+            <span class="sp-name">Data Automation</span>
+            <span class="sp-hint">Custom quote</span>
+          </label>
+          <label class="sp-opt sp-full">
+            <input type="radio" name="service" value="other" />
+            <span class="sp-name">Other or not sure</span>
+            <span class="sp-hint">Describe your project and I'll advise</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <!-- WEBSITES -->
+      <div class="service-detail-block" id="detail-websites">
+        <div class="service-detail-header">Website details</div>
+
+        <fieldset class="form-group">
+          <legend>Package</legend>
+          <div class="tier-cards">
+            <label class="tier-card">
+              <input type="radio" name="website_package" value="Simple Website" data-product="website-simple" required />
+              <span class="tier-top"><span class="tier-name">Simple Website</span><span class="tier-price">£200 <small>one-off</small></span></span>
+              <ul class="tier-features">
+                <li>Home, About, Services and Contact pages</li>
+                <li>Mobile optimised with SEO setup</li>
+                <li>Hosting, maintenance and domain management</li>
+              </ul>
+            </label>
+            <label class="tier-card">
+              <input type="radio" name="website_package" value="Complex Website" data-product="website-complex" />
+              <span class="tier-top"><span class="tier-name">Complex Website</span><span class="tier-price">£500 <small>one-off</small></span></span>
+              <ul class="tier-features">
+                <li>Everything in Simple, plus:</li>
+                <li>Payment processing and a booking system</li>
+                <li>Accounts, database (Firebase) and admin views</li>
+                <li>Calendar integration and AI support features</li>
+                <li>Bug fixes and ongoing support</li>
+              </ul>
+            </label>
+            <label class="tier-card tier-quote">
+              <input type="radio" name="website_package" value="Custom build (quote)" />
+              <span class="tier-top"><span class="tier-name">Custom build</span><span class="tier-price">Quote</span></span>
+              <ul class="tier-features">
+                <li>E-commerce, large sites or anything not covered above. I'll reply with a price.</li>
+              </ul>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="w-business">Business name</label>
+            <input id="w-business" maxlength="120" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="w-current">Current website <span class="optional">(if any)</span></label>
+            <input id="w-current" maxlength="300" type="url" placeholder="https://" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="w-type">Website type</label>
+            <select id="w-type">
+              <option value="" selected>Choose one</option>
+              <option>Brand / Portfolio</option>
+              <option>Service business</option>
+              <option>E-commerce / Online store</option>
+              <option>Landing page</option>
+              <option>Blog / Content site</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="w-style">Design style</label>
+            <select id="w-style">
+              <option value="" selected>Choose one</option>
+              <option>Clean and minimal</option>
+              <option>Bold and creative</option>
+              <option>Corporate / Professional</option>
+              <option>Modern tech</option>
+              <option>Match existing brand</option>
+              <option>Open to suggestions</option>
+            </select>
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <legend>Pages needed</legend>
+          <div class="check-group two-col">
+            <label class="check-item"><input type="checkbox" value="Home" /> Home</label>
+            <label class="check-item"><input type="checkbox" value="About" /> About</label>
+            <label class="check-item"><input type="checkbox" value="Services" /> Services</label>
+            <label class="check-item"><input type="checkbox" value="Portfolio" /> Portfolio / Work</label>
+            <label class="check-item"><input type="checkbox" value="Contact" /> Contact</label>
+            <label class="check-item"><input type="checkbox" value="Blog" /> Blog</label>
+            <label class="check-item"><input type="checkbox" value="Shop" /> Shop / Products</label>
+            <label class="check-item"><input type="checkbox" value="Other" /> Other</label>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="w-timeline">Timeline</label>
+          <select id="w-timeline">
+            <option value="" selected>When do you need it?</option>
+            <option>As soon as possible</option>
+            <option>Within 2 weeks</option>
+            <option>Within 1 month</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="w-notes">Extra notes <span class="optional">(optional)</span></label>
+          <textarea id="w-notes" maxlength="5000" placeholder="Brand notes, sites you like, goals, anything else"></textarea>
+        </div>
+      </div>
+
+      <!-- AI RECEPTIONIST -->
+      <div class="service-detail-block" id="detail-ai">
+        <div class="service-detail-header">AI receptionist details</div>
+
+        <fieldset class="form-group">
+          <legend>Plan</legend>
+          <div class="tier-cards">
+            <label class="tier-card">
+              <input type="radio" name="ai_plan" value="Starter" data-product="ai-starter" required />
+              <span class="tier-top"><span class="tier-name">Starter</span><span class="tier-price">£40 <small>per month</small></span></span>
+              <ul class="tier-features">
+                <li>24/7 website chat assistant</li>
+                <li>Basic call handling</li>
+              </ul>
+            </label>
+            <label class="tier-card">
+              <input type="radio" name="ai_plan" value="Growth" data-product="ai-growth" />
+              <span class="tier-top"><span class="tier-name">Growth</span><span class="tier-price">£97 <small>per month</small></span></span>
+              <ul class="tier-features">
+                <li>Calls and website chat</li>
+                <li>Unlimited interactions</li>
+              </ul>
+            </label>
+            <label class="tier-card">
+              <input type="radio" name="ai_plan" value="Professional" data-product="ai-pro" />
+              <span class="tier-top"><span class="tier-name">Professional</span><span class="tier-price">£197 <small>per month</small></span></span>
+              <ul class="tier-features">
+                <li>Calls, chat and bookings</li>
+                <li>AI performance dashboard</li>
+              </ul>
+            </label>
+            <label class="tier-card tier-quote">
+              <input type="radio" name="ai_plan" value="Enterprise or custom (quote)" />
+              <span class="tier-top"><span class="tier-name">Enterprise</span><span class="tier-price">Quote</span></span>
+              <ul class="tier-features">
+                <li>Multiple locations or a custom AI build, usually from £500/month</li>
+              </ul>
+            </label>
+          </div>
+          <p class="tier-note">Monthly plans renew automatically. Cancel any time from the "Manage subscription" link in the footer.</p>
+        </fieldset>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="a-business">Business name</label>
+            <input id="a-business" maxlength="120" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="a-hours">Business hours</label>
+            <input id="a-hours" maxlength="120" type="text" placeholder="e.g. Mon to Fri, 9am to 6pm" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="a-services">Services you provide</label>
+          <textarea id="a-services" maxlength="5000" placeholder="What does your business do? e.g. plumbing, dental, legal, coaching"></textarea>
+        </div>
+        <fieldset class="form-group">
+          <legend>What should the AI do?</legend>
+          <div class="check-group two-col">
+            <label class="check-item"><input type="checkbox" value="Answer calls 24/7" /> Answer calls 24/7</label>
+            <label class="check-item"><input type="checkbox" value="Website chat" /> Handle website chat</label>
+            <label class="check-item"><input type="checkbox" value="Bookings" /> Take bookings</label>
+            <label class="check-item"><input type="checkbox" value="Qualify leads" /> Qualify and capture leads</label>
+          </div>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Preferred contact method</legend>
+          <div class="check-group inline">
+            <label class="check-item"><input type="radio" name="ai_contact" value="Email" data-phone-toggle="ai" /> Email</label>
+            <label class="check-item"><input type="radio" name="ai_contact" value="Phone" data-phone-toggle="ai" /> Phone call</label>
+            <label class="check-item"><input type="radio" name="ai_contact" value="WhatsApp" data-phone-toggle="ai" /> WhatsApp</label>
+          </div>
+        </fieldset>
+        <div class="form-group" id="ai-phone-field" hidden>
+          <label for="a-phone">Phone number</label>
+          <input id="a-phone" maxlength="30" type="tel" autocomplete="tel" placeholder="+44 7700 000000" />
+        </div>
+      </div>
+
+      <!-- APP DEVELOPMENT -->
+      <div class="service-detail-block" id="detail-app">
+        <div class="service-detail-header">App details</div>
+        <div class="form-group">
+          <label for="p-name">App name or concept</label>
+          <input id="p-name" maxlength="120" type="text" placeholder="What are you building?" />
+        </div>
+        <fieldset class="form-group">
+          <legend>Platform</legend>
+          <div class="check-group two-col">
+            <label class="check-item"><input type="checkbox" value="Web app" /> Web app (browser)</label>
+            <label class="check-item"><input type="checkbox" value="iOS" /> iOS</label>
+            <label class="check-item"><input type="checkbox" value="Android" /> Android</label>
+            <label class="check-item"><input type="checkbox" value="All platforms" /> All platforms</label>
+          </div>
+        </fieldset>
+        <div class="form-group">
+          <label for="p-features">Key features</label>
+          <textarea id="p-features" maxlength="5000" placeholder="e.g. user login, dashboard, payments, bookings, notifications"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="p-users">Target users</label>
+          <input id="p-users" maxlength="120" type="text" placeholder="Who will use this app?" />
+        </div>
+        <fieldset class="form-group">
+          <legend>Do you have designs?</legend>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="app_designs" value="Yes, Figma or mockups ready" /> Yes, I have Figma files or mockups</label>
+            <label class="check-item"><input type="radio" name="app_designs" value="Rough ideas only" /> Rough ideas only, I need design help</label>
+            <label class="check-item"><input type="radio" name="app_designs" value="No, design from scratch" /> No, please design it from scratch</label>
+          </div>
+        </fieldset>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="p-timeline">Timeline</label>
+            <select id="p-timeline">
+              <option value="" selected>When do you need it?</option>
+              <option>Within 1 month</option>
+              <option>1 to 3 months</option>
+              <option>3 to 6 months</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="p-budget">Budget</label>
+            <select id="p-budget">
+              <option value="" selected>Choose a range</option>
+              <option>£200 to £500</option>
+              <option>£500 to £1,000</option>
+              <option>£1,000 to £2,000</option>
+              <option>£2,000 to £5,000</option>
+              <option>£5,000+</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA AUTOMATION -->
+      <div class="service-detail-block" id="detail-automation">
+        <div class="service-detail-header">Automation details</div>
+
+        <div class="case-study">
+          <div class="case-study-label">Example project</div>
+          <div class="case-study-title">AI lead scraper and contact enrichment for Fieldmotion</div>
+          <p class="case-study-desc">
+            A custom scraper that searches a database of over 10,000 companies and builds full lead profiles (phone, email, LinkedIn, website and address) ready to import into any CRM, with no manual research.
+          </p>
+          <dl class="case-study-stats">
+            <div><dt>Entries</dt><dd>10k+</dd></div>
+            <div><dt>Data points</dt><dd>6</dd></div>
+            <div><dt>Automated</dt><dd>100%</dd></div>
+          </dl>
+        </div>
+
+        <div class="form-group">
+          <label for="d-business">Business name</label>
+          <input id="d-business" maxlength="120" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="d-tools">Tools you currently use</label>
+          <textarea id="d-tools" maxlength="5000" placeholder="e.g. Google Sheets, HubSpot, Shopify, Slack, Notion, Airtable"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="d-automate">What would you like to automate?</label>
+          <textarea id="d-automate" maxlength="5000" placeholder="Describe the process or workflow"></textarea>
+        </div>
+        <fieldset class="form-group">
+          <legend>Main goals</legend>
+          <div class="check-group two-col">
+            <label class="check-item"><input type="checkbox" value="Save time" /> Save time on manual tasks</label>
+            <label class="check-item"><input type="checkbox" value="Reduce errors" /> Reduce human errors</label>
+            <label class="check-item"><input type="checkbox" value="Connect tools" /> Connect existing tools</label>
+            <label class="check-item"><input type="checkbox" value="Dashboards" /> Real-time dashboards</label>
+            <label class="check-item"><input type="checkbox" value="Reporting" /> Custom reporting</label>
+            <label class="check-item"><input type="checkbox" value="Other" /> Other</label>
+          </div>
+        </fieldset>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="d-volume">Data volume</label>
+            <select id="d-volume">
+              <option value="" selected>Rough volume</option>
+              <option>Under 1k records a day</option>
+              <option>1k to 10k a day</option>
+              <option>10k+ a day</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="d-budget">Budget</label>
+            <select id="d-budget">
+              <option value="" selected>Choose a range</option>
+              <option>£200 to £500</option>
+              <option>£500 to £1,000</option>
+              <option>£1,000 to £2,000</option>
+              <option>Custom / Ongoing</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- OTHER -->
+      <div class="service-detail-block" id="detail-other">
+        <div class="service-detail-header">Project details</div>
+        <div class="form-group">
+          <label for="o-about">Tell me about your project</label>
+          <textarea id="o-about" maxlength="5000" placeholder="Your project, goals and any key details"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="o-budget">Budget range</label>
+          <select id="o-budget">
+            <option value="" selected>Choose a range</option>
+            <option>£200 to £500</option>
+            <option>£500 to £1,000</option>
+            <option>£1,000 to £2,000</option>
+            <option>£2,000+</option>
+          </select>
+        </div>
+      </div>
+
+      <p hidden>
+        <label>Don't fill this out: <input maxlength="120" name="bot-field" tabindex="-1" autocomplete="off" /></label>
+      </p>
+      <div class="form-actions">
+        <button type="submit" class="form-submit" id="formSubmit">Send quote request</button>
+        <p class="form-hint" id="formHint">Choose a service to continue.</p>
+        <div class="form-status" id="quoteStatus" aria-live="polite"></div>
+        <p class="form-privacy">I'll only use these details for your project or enquiry. See the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</p>
+      </div>
+    </form>
+  </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">Luke Studio</a>
+        <p class="footer-desc">Fast, well-made websites, apps and AI tools for businesses that want to stand out online.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <ul class="footer-nav">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Start a project</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Get in touch</div>
+        <ul class="footer-nav">
+          <li><a href="mailto:lukeszns@gmail.com">lukeszns@gmail.com</a></li>
+          <li><a href="tel:07851950009">07851 950009</a></li>
+          <li><a href="https://billing.stripe.com/p/login/dRmaF0gmu9xi2UJ0NYdEs00" rel="noopener noreferrer">Manage subscription</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy"><span>© 2026 Luke Studio</span><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/luke_reaney6/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/luke-reaney" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/lukeszn" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.930 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://x.com/lukeszn" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BASKET -->
+  <div class="basket-overlay" id="basketOverlay" hidden></div>
+  <aside class="basket-drawer" id="basketDrawer" role="dialog" aria-modal="true" aria-labelledby="basketTitle" aria-hidden="true">
+    <div class="basket-head">
+      <h2 id="basketTitle">Your basket</h2>
+      <button class="basket-close" id="basketClose" type="button" aria-label="Close basket">
+        <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+      </button>
+    </div>
+    <div class="basket-body">
+      <ul class="basket-items" id="basketItems"></ul>
+      <div class="basket-empty" id="basketEmpty">
+        <p>Your basket is empty.</p>
+        <p class="basket-empty-hint">Choose a website package or AI receptionist plan in the project form, fill in your details, and add it here.</p>
+        <a href="#contact" class="btn-outline" id="basketBrowse">Start a project</a>
+      </div>
+      <div class="basket-pay" id="basketPay" hidden>
+        <button class="basket-back" id="basketBack" type="button">Back to basket</button>
+        <div class="basket-totals" id="basketPayTotals"></div>
+        <div id="checkout-form"></div>
+        <div class="form-status" id="basketPayStatus" aria-live="polite"></div>
+        <p class="basket-note">Your payment details go straight to Stripe's secure form and never touch this website. Your project details are sent to me once payment is complete. By paying you agree to the <a href="terms.html">Terms</a>.</p>
+      </div>
+    </div>
+    <div class="basket-foot" id="basketFoot" hidden>
+      <div class="basket-totals" id="basketTotals"></div>
+      <button class="form-submit basket-checkout" id="basketCheckout" type="button">Checkout securely</button>
+      <div class="form-status" id="basketStatus" aria-live="polite"></div>
+      <p class="basket-note">Pay with card, Apple Pay, Google Pay or bank through Stripe. Your project details are sent to me once payment is complete. By checking out you agree to the <a href="terms.html">Terms</a>.</p>
+    </div>
+  </aside>
+
+  <!-- CHATBOT WIDGET -->
+  <div class="chat-widget" id="chatWidget">
+    <button class="chat-help-btn" id="chatHelp" type="button">Questions?</button>
+    <button class="chat-toggle" id="chatToggle" type="button" aria-label="Open chat">
+      <svg class="ph chat-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.050-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>
+      <svg class="ph chat-close-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+    </button>
+    <div class="chat-panel" id="chatPanel">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="chat-name">Luke Studio</div>
+          <div class="chat-status">Automated assistant</div>
+        </div>
+        <button class="chat-minimize" id="chatMinimize" type="button" aria-label="Close chat">
+          <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128Z"/></svg>
+        </button>
+      </div>
+      <div class="chat-messages" id="chatMessages"></div>
+      <div class="chat-qr" id="chatQR"></div>
+      <div class="chat-input-row">
+        <input class="chat-input" id="chatInput" type="text" placeholder="Type a message" autocomplete="off" aria-label="Message" />
+        <button class="chat-send" id="chatSend" type="button" aria-label="Send">
+          <svg class="ph" viewBox="0 0 256 256" aria-hidden="true"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/basket.js" defer></script>
+</body>
+</html>
