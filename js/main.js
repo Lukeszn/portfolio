@@ -50,14 +50,14 @@ document.querySelectorAll('.project-card').forEach(card => {
       title: 'New Era Web App',
       copy: 'Dashboard-style app experience with live data, responsive screens, and a polished mobile view.',
       href: 'https://lukeszn.github.io/New-Era-App/',
-      screenshot: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=420&h=860',
+      screenshot: 'images/new-era-phone.webp',
       alt: 'New Era App main page preview'
     },
     {
       title: 'Naomi Web App',
       copy: 'A clean, user-friendly product interface shaped around simple navigation and practical everyday workflows.',
       href: 'https://lukeszn.github.io/Naomi-app/',
-      screenshot: 'https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNaomi-app%2F?w=420&h=860',
+      screenshot: 'images/naomi-phone.webp',
       alt: 'Naomi App main page preview'
     }
   ];

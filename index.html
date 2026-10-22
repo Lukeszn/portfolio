@@ -11,12 +11,116 @@
   <script src="https://js.stripe.com/dahlia/stripe.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/intro.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23141619'/%3E%3Cpath d='M11 8v16h10' stroke='%23f7f8f9' stroke-width='3.5' fill='none'/%3E%3C/svg%3E" />
   <meta property="og:title" content="Luke Studio | Web Design & Development" />
   <meta property="og:description" content="Websites, apps, AI receptionists and data automation for small businesses. Buy a package online or request a quote." />
   <meta property="og:type" content="website" />
 </head>
 <body>
+  <!-- INTRO (css/intro.css, js/intro-gate.js, js/intro.js) -->
+  <div class="li-intro" id="li-intro" role="dialog" aria-label="Luke Studio intro">
+  <div class="li-atmos" aria-hidden="true"><div class="li-floor"></div></div>
+
+  <div class="li-bar-top">
+    <span class="li-mark">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#eef2f7"/><path d="M11 8v16h10" stroke="#0c1420" stroke-width="3.5" fill="none"/></svg>
+      Luke Studio
+    </span>
+    <button class="li-ghost-btn" id="li-skip" type="button">Skip intro</button>
+  </div>
+
+  <div class="li-viewport">
+    <div class="li-stage" id="li-stage">
+      <div class="li-tilt" id="li-tilt">
+        <div class="li-stack" id="li-stack">
+          <div class="li-shadow" id="li-shadow" aria-hidden="true"></div>
+
+          <div class="li-layer li-L-grid" aria-hidden="true">
+            <div class="li-rows"></div>
+            <div class="li-cols"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="li-tag"><small>1</small>Grid</div>
+          </div>
+
+          <div class="li-layer li-L-wire" aria-hidden="true">
+            <div class="li-b li-b-nav"></div>
+            <div class="li-b li-b-navcta"></div>
+            <div class="li-b li-b-h1"><span class="li-dim">H1, 96 px, 0.96 leading</span></div>
+            <div class="li-b li-b-sub"></div>
+            <div class="li-b li-b-btn1"></div>
+            <div class="li-b li-b-btn2"></div>
+            <div class="li-b li-b-browser li-x"><span class="li-dim">1200 × 760</span></div>
+            <div class="li-b li-b-phone li-x"></div>
+            <div class="li-b li-b-stats"></div>
+            <div class="li-tag"><small>2</small>Wireframe</div>
+          </div>
+
+          <div class="li-layer li-L-surf" aria-hidden="true">
+            <div class="li-b li-b-nav"></div>
+            <div class="li-b li-b-navcta"></div>
+            <div class="li-b li-b-btn1"></div>
+            <div class="li-b li-b-btn2"></div>
+            <div class="li-b li-b-browser li-mock">
+              <div class="li-mock-bar"><span></span><span></span><span></span><em></em></div>
+              <div class="li-mock-body">
+                <div class="li-mini-nav"><i></i><i></i></div>
+                <div class="li-hero-art"></div>
+                <div class="li-mini-cards"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="li-b li-b-phone">
+              <div class="li-phone-screen">
+                <span class="li-notch"></span>
+                <div class="li-hero-art"></div>
+                <div class="li-phone-lines"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="li-b li-b-stats"></div>
+            <div class="li-tag"><small>3</small>Surfaces</div>
+          </div>
+
+          <div class="li-layer li-L-type">
+            <div class="li-b li-b-logo li-t-logo" aria-hidden="true">
+              <svg viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#eef2f7"/><path d="M11 8v16h10" stroke="#0c1420" stroke-width="3.5" fill="none"/></svg>
+              Luke Studio
+            </div>
+            <div class="li-b li-b-links li-t-links" aria-hidden="true"><span>Services</span><span>Work</span><span>Process</span><span>About</span></div>
+            <div class="li-b li-b-navcta li-t-navcta" aria-hidden="true">Start a project</div>
+            <div class="li-b li-b-h1"><p class="li-t-h1" id="li-headline">Websites that actually convert.</p></div>
+            <div class="li-b li-b-sub"><p class="li-t-sub">Fast, well-made websites, apps and AI tools for businesses that want more enquiries from their website.</p></div>
+            <div class="li-b li-b-btn1 li-t-btn1" aria-hidden="true">Start a project</div>
+            <div class="li-b li-b-btn2 li-t-btn2" aria-hidden="true">See my work</div>
+            <dl class="li-b li-b-stats li-t-stats">
+              <div><dt>Projects delivered</dt><dd>15+</dd></div>
+              <div><dt>Client satisfaction</dt><dd>100%</dd></div>
+              <div><dt>Typical reply</dt><dd>Under 24 hrs</dd></div>
+              <div><dt>Support after launch</dt><dd>30 days</dd></div>
+            </dl>
+            <div class="li-tag" aria-hidden="true"><small>4</small>Type</div>
+          </div>
+
+          <div class="li-layer li-L-int">
+            <a class="li-b li-b-btn1" href="#contact"><span class="li-sr-only">Start a project</span></a>
+            <a class="li-b li-b-btn2" href="#work"><span class="li-sr-only">See my work</span></a>
+            <div class="li-b li-halo" id="li-halo" aria-hidden="true"></div>
+            <span class="li-ripple" id="li-ripple" aria-hidden="true"></span>
+            <svg class="li-cursor" id="li-cursor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5 20 12l-7.2 1.6L9 20.5Z" fill="#eef2f7" stroke="#0c1420" stroke-width="1.4" stroke-linejoin="round"/></svg>
+            <div class="li-tag" aria-hidden="true"><small>5</small>Interaction</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="li-bar-bottom">
+    <div class="li-status" aria-live="polite">
+      <b id="li-stepName">Grid</b>
+      <span class="li-track" aria-hidden="true"><i id="li-bar"></i></span>
+      <span class="li-count" id="li-stepCount">1 of 5 layers</span>
+    </div>
+  </div>
+</div>
+  <script src="js/intro-gate.js"></script>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- MOBILE MENU -->
@@ -68,10 +172,10 @@
     <div class="hero-visual" aria-hidden="true">
       <figure class="hero-browser">
         <div class="hero-browser-bar"><span></span><span></span><span></span><em>lukeszn.github.io/New-Era-App</em></div>
-        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=1200&h=760" alt="" width="1200" height="760" />
+        <img src="images/new-era-desktop.webp" alt="" width="1200" height="760" />
       </figure>
       <figure class="hero-phone">
-        <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNaomi-app%2F?w=420&h=860" alt="" width="420" height="860" />
+        <img src="images/naomi-phone.webp" alt="" width="420" height="860" />
       </figure>
     </div>
   </section>
@@ -170,7 +274,7 @@
         <div class="project-thumb">
           <div class="preview-bar"><span class="preview-url">lukeszn.github.io/New-Era-App</span></div>
           <div class="preview-viewport">
-            <img class="preview-screenshot" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=1200&h=675" alt="New Era App home screen" loading="lazy" />
+            <img class="preview-screenshot" src="images/new-era-desktop.webp" alt="New Era App home screen" loading="lazy" />
           </div>
         </div>
         <div class="project-info">
@@ -185,7 +289,7 @@
         <div class="project-thumb">
           <div class="preview-bar"><span class="preview-url">lukeszn.github.io/Naomi-app</span></div>
           <div class="preview-viewport">
-            <img class="preview-screenshot" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNaomi-app%2F?w=1200&h=675" alt="Naomi App home screen" loading="lazy" />
+            <img class="preview-screenshot" src="images/naomi-desktop.webp" alt="Naomi App home screen" loading="lazy" />
           </div>
         </div>
         <div class="project-info">
@@ -200,7 +304,7 @@
         <div class="phone-stage" aria-label="Mobile app preview carousel">
           <div class="mobile-phone">
             <div class="phone-screen">
-              <img class="phone-screenshot" id="phoneScreenshot" src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flukeszn.github.io%2FNew-Era-App%2F?w=420&h=860" alt="New Era App main page preview" loading="lazy" />
+              <img class="phone-screenshot" id="phoneScreenshot" src="images/new-era-phone.webp" alt="New Era App main page preview" loading="lazy" />
             </div>
           </div>
         </div>
@@ -855,6 +959,8 @@
     </div>
   </div>
 
+  <script src="js/vendor/gsap.min.js" defer></script>
+  <script src="js/intro.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/basket.js" defer></script>
 </body>
